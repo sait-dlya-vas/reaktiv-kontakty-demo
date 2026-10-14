@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты – демо для «Реактив Экспресс»</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://cdn.insales-shop.ru/assets/static-versioned/5.34/static/fonts/PT+Root+UI/stylesheet.css">
+<style>
+  /* ===== только для демо: имитация темы InSales вокруг блока ===== */
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #fff; color: #2c2628; font-family: 'PT Root UI', 'PT Sans', Arial, sans-serif; }
+  .demo-note { background: #2c2628; color: #fff; font-size: 13px; line-height: 1.4; padding: 8px 16px; text-align: center; }
+  .demo-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; max-width: 1240px; margin: 0 auto; padding: 14px 20px; border-bottom: 1px solid #eee; }
+  .demo-head img { height: 30px; width: auto; display: block; }
+  .demo-head span { font-size: 14px; color: #6b6566; }
+  .demo-theme { max-width: 1240px; margin: 0 auto; padding: 18px 20px 0; }
+  .demo-crumbs { font-size: 13px; color: #6b6566; }
+  .demo-crumbs a { color: inherit; }
+  .demo-theme h1 { margin: 10px 0 0; font-size: 32px; font-weight: 700; }
+  .demo-foot { max-width: 1240px; margin: 48px auto 0; padding: 22px 20px 30px; border-top: 1px solid #eee; font-size: 14px; color: #6b6566; }
+</style>
+</head>
+<body>
+
+<p class="demo-note">Демо для отклика на Kwork: новый блок страницы «Контакты». Шапка, меню и подвал остаются вашими – их блок не трогает.</p>
+<div class="demo-head">
+  <img src="https://cdn.insales-shop.ru/files/1/2589/20138525/original/РЕАКТИВ_ЭКСПРЕСС__2_.png" alt="Реактив Экспресс">
+  <span>шапка вашего сайта</span>
+</div>
+<div class="demo-theme">
+  <div class="demo-crumbs"><a href="#">Главная</a> / Контакты</div>
+  <h1>Контакты</h1>
+</div>
+
+<!-- ================= НАЧАЛО БЛОКА ДЛЯ СТРАНИЦЫ «КОНТАКТЫ» В INSALES ================= -->
+<div class="rx-contacts">
+<style>
+.rx-contacts { --rx-orange: #FC8237; --rx-orange-deep: #e86a1d; --rx-ink: #2C2628; --rx-blue: #507DBC; --rx-blue-deep: #3f68a3;
+  --rx-orange-soft: #FFF3EA; --rx-blue-soft: #EEF3FA; --rx-grey: #989797; --rx-muted: #6b6566; --rx-line: #ebe7e4; --rx-bg: #F7F6F5;
+  max-width: 1240px; margin: 0 auto; padding: 22px 20px 0; color: var(--rx-ink); font-family: inherit; font-size: 16px; line-height: 1.5; }
+.rx-contacts *, .rx-contacts *::before, .rx-contacts *::after { box-sizing: border-box; }
+.rx-contacts a { color: inherit; }
+.rx-contacts h2, .rx-contacts h3, .rx-contacts p { margin: 0; }
+.rx-contacts :focus-visible { outline: 3px solid var(--rx-blue); outline-offset: 2px; border-radius: 6px; }
+
+/* верх: главный номер и статус */
+.rx-top { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr auto; gap: 18px 32px; align-items: end;
+  padding: 28px 32px; border-radius: 22px; background: var(--rx-bg); }
+.rx-top__main { position: relative; }
+.rx-top__label { font-size: 15px; color: var(--rx-muted); }
+.rx-top__phone { display: inline-block; margin-top: 2px; font-size: clamp(32px, 5vw, 50px); font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; text-decoration: none; }
+.rx-top__phone:hover { color: var(--rx-orange-deep); }
+.rx-top__sub { margin-top: 6px; font-size: 15px; color: var(--rx-muted); }
+.rx-top__sub a { text-decoration: none; border-bottom: 1px solid var(--rx-line); }
+.rx-status { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.rx-status__pill { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; background: #fff; font-size: 15px; font-weight: 500; }
+.rx-status__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--rx-grey); flex: none; }
+.rx-status--open .rx-status__dot { background: #2fa36b; box-shadow: 0 0 0 4px rgba(47,163,107,.18); }
+.rx-status__note { max-width: 300px; font-size: 14px; color: var(--rx-muted); }
+
+/* выбор отдела */
+.rx-section { margin-top: 44px; }
+.rx-section__title { font-size: clamp(22px, 2.4vw, 28px); font-weight: 700; line-height: 1.2; }
+.rx-section__lead { margin-top: 6px; color: var(--rx-muted); }
+.rx-depts { margin-top: 20px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+.rx-card { display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 18px; background: #fff; border: 1px solid var(--rx-line); }
+.rx-card--sales { grid-column: span 4; background: var(--rx-orange-soft); border-color: #fbe0cd; }
+.rx-card--search { grid-column: span 2; background: var(--rx-blue-soft); border-color: #dbe5f3; }
+.rx-card--small { grid-column: span 2; }
+.rx-card__icon { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: #fff; color: var(--rx-orange); }
+.rx-card--search .rx-card__icon { color: var(--rx-blue); }
+.rx-card--small .rx-card__icon { background: var(--rx-bg); color: var(--rx-ink); }
+.rx-card__icon svg { width: 22px; height: 22px; }
+.rx-card__title { font-size: 20px; font-weight: 700; line-height: 1.25; }
+.rx-card__text { color: var(--rx-muted); font-size: 15px; }
+.rx-card__lines { display: grid; gap: 6px; margin-top: 2px; }
+.rx-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+.rx-line a { font-weight: 500; text-decoration: none; }
+.rx-line a:hover { color: var(--rx-orange-deep); }
+.rx-line small { font-size: 13px; color: var(--rx-muted); }
+.rx-line--big a { font-size: 22px; font-weight: 700; }
+.rx-card__actions { margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+.rx-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 18px; border-radius: 12px; font: inherit; font-size: 15px; font-weight: 500; text-decoration: none; cursor: pointer; border: 1.5px solid transparent; transition: background-color .15s, border-color .15s, color .15s; }
+.rx-btn--orange { background: var(--rx-orange); color: #fff; }
+.rx-btn--orange:hover { background: var(--rx-orange-deep); }
+.rx-btn--blue { background: var(--rx-blue); color: #fff; }
+.rx-btn--blue:hover { background: var(--rx-blue-deep); }
+.rx-btn--ghost { background: #fff; border-color: var(--rx-line); color: var(--rx-ink); }
+.rx-btn--ghost:hover { border-color: var(--rx-ink); }
+.rx-contacts a.rx-btn--orange, .rx-contacts a.rx-btn--blue { color: #fff; }
+
+/* мессенджеры */
+.rx-messengers { grid-column: span 6; display: grid; grid-template-columns: auto 1fr; gap: 14px 24px; align-items: center; padding: 18px 22px; border-radius: 18px; background: var(--rx-bg); }
+.rx-messengers__title { font-weight: 700; }
+.rx-messengers__list { display: flex; flex-wrap: wrap; gap: 8px; }
+.rx-chip { display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 14px; border-radius: 999px; background: #fff; text-decoration: none; font-size: 15px; font-weight: 500; border: 1px solid var(--rx-line); }
+.rx-chip:hover { border-color: var(--rx-ink); }
+.rx-chip i { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+
+/* склад */
+.rx-store { margin-top: 20px; display: grid; grid-template-columns: 5fr 7fr; gap: 16px; }
+.rx-store__info { display: flex; flex-direction: column; gap: 16px; padding: 24px; border-radius: 18px; border: 1px solid var(--rx-line); }
+.rx-addr { font-size: 22px; font-weight: 700; line-height: 1.3; }
+.rx-pass { display: grid; grid-template-columns: auto 1fr; gap: 10px; padding: 14px 16px; border-radius: 14px; background: var(--rx-orange-soft); font-size: 15px; }
+.rx-pass svg { width: 22px; height: 22px; color: var(--rx-orange-deep); margin-top: 1px; }
+.rx-pass a { font-weight: 700; text-decoration: none; white-space: nowrap; }
+.rx-hours { display: grid; grid-template-columns: auto 1fr; gap: 4px 18px; font-size: 15px; }
+.rx-hours dt { color: var(--rx-muted); }
+.rx-hours dd { margin: 0; font-weight: 500; }
+.rx-hours__note { font-size: 14px; color: var(--rx-muted); }
+.rx-map { position: relative; min-height: 360px; border-radius: 18px; overflow: hidden; background: var(--rx-bg); border: 1px solid var(--rx-line); }
+.rx-map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* как проехать */
+.rx-route { margin-top: 16px; border-radius: 18px; border: 1px solid var(--rx-line); }
+.rx-route summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; padding: 16px 22px; }
+.rx-route summary::-webkit-details-marker { display: none; }
+.rx-route__thumbs { display: flex; }
+.rx-route__thumbs img { width: 64px; height: 44px; object-fit: cover; border-radius: 8px; border: 2px solid #fff; margin-left: -12px; }
+.rx-route__thumbs img:first-child { margin-left: 0; }
+.rx-route__title { font-weight: 700; }
+.rx-route__title small { display: block; font-weight: 400; font-size: 14px; color: var(--rx-muted); }
+.rx-route__toggle { font-size: 15px; font-weight: 500; color: var(--rx-blue); white-space: nowrap; }
+.rx-route[open] .rx-route__toggle-open { display: none; }
+.rx-route:not([open]) .rx-route__toggle-close { display: none; }
+.rx-steps { list-style: none; margin: 0; padding: 4px 22px 22px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; counter-reset: rx-step; }
+.rx-step { display: flex; flex-direction: column; gap: 10px; }
+.rx-step__text { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; font-size: 15px; }
+.rx-step__num { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--rx-ink); color: #fff; font-size: 14px; font-weight: 700; }
+.rx-step__photos { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px; }
+.rx-step img { width: 100%; aspect-ratio: 16 / 7.5; object-fit: cover; border-radius: 12px; display: block; }
+
+/* реквизиты */
+.rx-req { margin-top: 16px; display: grid; grid-template-columns: 1fr auto; gap: 16px 24px; align-items: center; padding: 22px; border-radius: 18px; background: var(--rx-bg); }
+.rx-req__title { font-weight: 700; margin-bottom: 8px; }
+.rx-req dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 18px; font-size: 15px; }
+.rx-req dt { color: var(--rx-muted); }
+.rx-req dd { margin: 0; font-variant-numeric: tabular-nums; }
+.rx-req__done { font-size: 14px; color: #2f8a5c; min-height: 20px; }
+
+/* планшет */
+@media (max-width: 1000px) {
+  .rx-card--sales { grid-column: span 6; }
+  .rx-card--search { grid-column: span 3; }
+  .rx-card--small { grid-column: span 3; }
+  .rx-card--small:last-of-type { grid-column: span 6; }
+  .rx-store { grid-template-columns: 1fr; }
+}
+/* телефон */
+@media (max-width: 640px) {
+  .rx-contacts { padding: 16px 16px 0; }
+  .rx-top { grid-template-columns: 1fr; padding: 22px 18px; border-radius: 18px; }
+  .rx-depts { grid-template-columns: 1fr; gap: 12px; }
+  .rx-card--sales, .rx-card--search, .rx-card--small, .rx-card--small:last-of-type, .rx-messengers { grid-column: auto; }
+  .rx-card { padding: 18px; }
+  .rx-card__actions .rx-btn { flex: 1 1 0; padding: 10px 8px; }
+  .rx-card__actions .rx-btn--orange, .rx-card__actions .rx-btn--blue { flex-basis: 100%; }
+  .rx-messengers { grid-template-columns: 1fr; padding: 18px; }
+  .rx-store__info { padding: 18px; }
+  .rx-map { min-height: 280px; }
+  .rx-route summary { grid-template-columns: 1fr auto; padding: 14px 16px; }
+  .rx-route__thumbs { display: none; }
+  .rx-steps { grid-template-columns: 1fr; padding: 4px 16px 18px; }
+  .rx-req { grid-template-columns: 1fr; padding: 18px; }
+  .rx-req .rx-btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .rx-contacts * { transition: none !important; } }
+</style>
+
+  <!-- главный номер и статус -->
+  <section class="rx-top" aria-label="Главный телефон">
+    <div class="rx-top__main">
+      <p class="rx-top__label">Отдел продаж, бесплатно по России</p>
+      <a class="rx-top__phone" href="tel:+78005053094">8 800 505-30-94</a>
+      <p class="rx-top__sub">По Москве – <a href="tel:+74996476194">+7 499 647-61-94</a>, тоже бесплатно</p>
+    </div>
+    <div class="rx-status" id="rx-status">
+      <span class="rx-status__pill"><span class="rx-status__dot"></span><span id="rx-status-text">Пн–Пт с 10:00 до 20:00</span></span>
+      <p class="rx-status__note">Время московское</p>
+    </div>
+  </section>
+
+  <!-- отделы -->
+  <section class="rx-section" aria-labelledby="rx-depts-title">
+    <h2 class="rx-section__title" id="rx-depts-title">С чем вы к нам обращаетесь?</h2>
+    <p class="rx-section__lead">Напишите сразу в нужный отдел – так ответ придёт быстрее.</p>
+
+    <div class="rx-depts">
+      <article class="rx-card rx-card--sales">
+        <span class="rx-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 14h9"/></svg></span>
+        <h3 class="rx-card__title">Купить реактивы</h3>
+        <p class="rx-card__text">Отдел продаж: наличие, цены, счета и доставка.</p>
+        <div class="rx-card__lines">
+          <p class="rx-line rx-line--big"><a href="tel:+78005053094">8 800 505-30-94</a><small>бесплатно по России</small></p>
+          <p class="rx-line"><a href="tel:+74996476194">+7 499 647-61-94</a><small>бесплатно по Москве</small></p>
+          <p class="rx-line"><a href="mailto:info@reaktiv-express.ru">info@reaktiv-express.ru</a></p>
+        </div>
+        <div class="rx-card__actions">
+          <a class="rx-btn rx-btn--orange" href="mailto:info@reaktiv-express.ru?subject=Заказ%20реактивов">Написать в отдел продаж</a>
+          <a class="rx-btn rx-btn--ghost" href="https://api.whatsapp.com/send?phone=74996476194" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="rx-btn rx-btn--ghost" href="https://t.me/reaktivexpress_bot" target="_blank" rel="noopener">Telegram</a>
+          <a class="rx-btn rx-btn--ghost" href="https://max.ru/id772975650912_bot" target="_blank" rel="noopener">MAX</a>
+        </div>
+      </article>
+
+      <article class="rx-card rx-card--search">
+        <span class="rx-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></span>
+        <h3 class="rx-card__title">Не нашли нужный реактив?</h3>
+        <p class="rx-card__text">Поможем найти редкую позицию, подобрать аналог или привезти из Индии.</p>
+        <div class="rx-card__actions">
+          <a class="rx-btn rx-btn--blue" href="mailto:info@reaktiv-express.ru?subject=Поиск%20реактива">Отправить запрос</a>
+        </div>
+      </article>
+
+      <article class="rx-card rx-card--small">
+        <span class="rx-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg></span>
+        <h3 class="rx-card__title">Оптовые поставки из Индии</h3>
+        <p class="rx-card__text">Крупные партии и регулярные поставки химических реактивов.</p>
+        <p class="rx-line"><a href="mailto:opt@reaktiv-express.ru">opt@reaktiv-express.ru</a></p>
+        <div class="rx-card__actions">
+          <a class="rx-btn rx-btn--ghost" href="https://reaktiv-express.ru/collection/optovyy-otdel">Перейти в оптовый отдел</a>
+        </div>
+      </article>
+
+      <article class="rx-card rx-card--small">
+        <span class="rx-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h11v9H2zM13 10h4l4 4v2h-8"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+        <h3 class="rx-card__title">Закупки и сотрудничество</h3>
+        <p class="rx-card__text">Предложите свою продукцию или станьте нашим поставщиком.</p>
+        <p class="rx-line"><a href="mailto:zakupki@reaktiv-express.ru">zakupki@reaktiv-express.ru</a></p>
+        <div class="rx-card__actions">
+          <a class="rx-btn rx-btn--ghost" href="mailto:zakupki@reaktiv-express.ru?subject=Сотрудничество">Предложить сотрудничество</a>
+        </div>
+      </article>
+
+      <article class="rx-card rx-card--small">
+        <span class="rx-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5M9 12h7M9 16h7"/></svg></span>
+        <h3 class="rx-card__title">Бухгалтерия</h3>
+        <p class="rx-card__text">Оплаты, закрывающие документы и сверки.</p>
+        <p class="rx-line"><a href="mailto:glavbuh@reaktiv-express.ru">glavbuh@reaktiv-express.ru</a></p>
+        <div class="rx-card__actions">
+          <a class="rx-btn rx-btn--ghost" href="mailto:glavbuh@reaktiv-express.ru?subject=Вопрос%20в%20бухгалтерию">Написать в бухгалтерию</a>
+        </div>
+      </article>
+
+      <div class="rx-messengers">
+        <p class="rx-messengers__title">Мессенджеры и соцсети</p>
+        <div class="rx-messengers__list">
+          <a class="rx-chip" href="https://t.me/reaktivexpress_bot" target="_blank" rel="noopener"><i style="background:#2aa3e0"></i>Telegram</a>
+          <a class="rx-chip" href="https://api.whatsapp.com/send?phone=74996476194" target="_blank" rel="noopener"><i style="background:#25d366"></i>WhatsApp</a>
+          <a class="rx-chip" href="https://max.ru/id772975650912_bot" target="_blank" rel="noopener"><i style="background:#6c4cf1"></i>MAX</a>
+          <a class="rx-chip" href="https://vk.com/reaktiv.express" target="_blank" rel="noopener"><i style="background:#0077ff"></i>Группа ВКонтакте</a>
+          <a class="rx-chip" href="https://t.me/reaktiv_express" target="_blank" rel="noopener"><i style="background:#2aa3e0"></i>Telegram-группа</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- склад -->
+  <section class="rx-section" aria-labelledby="rx-store-title">
+    <h2 class="rx-section__title" id="rx-store-title">Офис и склад</h2>
+    <div class="rx-store">
+      <div class="rx-store__info">
+        <p class="rx-addr">Москва, ул. Угрешская, д.&nbsp;31, корп.&nbsp;3</p>
+        <div class="rx-pass">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg>
+          <p>Въезд на территорию – строго по пропуску и по предварительной договорённости. Пропуск заказывайте по телефону склада <a href="tel:+79651084662">+7&nbsp;965&nbsp;108-46-62</a></p>
+        </div>
+        <dl class="rx-hours">
+          <dt>Пн–Пт</dt><dd>10:00–20:00</dd>
+          <dt>Сб–Вс</dt><dd>выходные</dd>
+        </dl>
+        <p class="rx-hours__note">Заказы через сайт принимаем круглосуточно, обрабатываем в рабочее время.</p>
+      </div>
+      <div class="rx-map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af56fc01c2582ef77d28a26042fe15da76670872506b0ae1a13e66895b17e9d37&amp;source=constructor" title="Склад на карте: Москва, ул. Угрешская, 31к3" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <details class="rx-route">
+      <summary>
+        <span class="rx-route__thumbs" aria-hidden="true"><img src="img/route-1.jpg" alt=""><img src="img/route-3.jpg" alt=""><img src="img/route-5.jpg" alt=""></span>
+        <span class="rx-route__title">Как к нам проехать на машине<small>От ул. Угрешской – 4 шага с фото</small></span>
+        <span class="rx-route__toggle"><span class="rx-route__toggle-open">Показать схему</span><span class="rx-route__toggle-close">Свернуть</span></span>
+      </summary>
+      <ol class="rx-steps">
+        <li class="rx-step">
+          <p class="rx-step__text"><span class="rx-step__num">1</span><span>Свернуть налево и сразу направо</span></p>
+          <div class="rx-step__photos"><img src="img/route-1.jpg" alt="Поворот налево с ул. Угрешской" loading="lazy"><img src="img/route-2.jpg" alt="Сразу поворот направо" loading="lazy"></div>
+        </li>
+        <li class="rx-step">
+          <p class="rx-step__text"><span class="rx-step__num">2</span><span>Съехать направо и затем повернуть налево на 2-й Угрешский проезд</span></p>
+          <img src="img/route-3.jpg" alt="Поворот на 2-й Угрешский проезд" loading="lazy">
+        </li>
+        <li class="rx-step">
+          <p class="rx-step__text"><span class="rx-step__num">3</span><span>Ехать прямо до конца мимо технопарка «РЕАТЭКС»</span></p>
+          <img src="img/route-4.jpg" alt="Проезд мимо технопарка «РЕАТЭКС»" loading="lazy">
+        </li>
+        <li class="rx-step">
+          <p class="rx-step__text"><span class="rx-step__num">4</span><span>В конце повернуть направо – вы перед нашими воротами</span></p>
+          <img src="img/route-5.jpg" alt="Въезд на территорию склада" loading="lazy">
+        </li>
+      </ol>
+    </details>
+
+    <div class="rx-req">
+      <div>
+        <p class="rx-req__title">Реквизиты</p>
+        <dl id="rx-req-list">
+          <dt>Получатель</dt><dd>ИП Разуваев Даниил Игоревич</dd>
+          <dt>ОГРНИП</dt><dd>318774600690987</dd>
+          <dt>ИНН</dt><dd>772975650912</dd>
+          <dt>Банк</dt><dd>ПАО Сбербанк</dd>
+        </dl>
+      </div>
+      <div>
+        <button class="rx-btn rx-btn--ghost" type="button" id="rx-req-copy">Скопировать реквизиты</button>
+        <p class="rx-req__done" id="rx-req-done" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+<script>
+(function () {
+  // Статус «работаем сейчас» по московскому времени. Без скрипта остаётся текст с графиком.
+  var box = document.getElementById('rx-status'), text = document.getElementById('rx-status-text');
+  if (box && text) {
+    try {
+      var p = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Moscow', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < p.length; i++) if (p[i].type === t) return p[i].value; };
+      var day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].indexOf(get('weekday'));
+      var mins = parseInt(get('hour'), 10) % 24 * 60 + parseInt(get('minute'), 10);
+      var weekday = day >= 0 && day <= 4;
+      if (weekday && mins >= 600 && mins < 1200) {
+        box.classList.add('rx-status--open'); text.textContent = 'Сейчас работаем, до 20:00';
+      } else {
+        var next = (weekday && mins < 600) ? 'сегодня' : (day >= 0 && day <= 3) ? 'завтра' : 'в понедельник';
+        text.textContent = 'Сейчас не работаем. Ответим ' + next + ' с 10:00';
+      }
+    } catch (e) {}
+  }
+  // Копирование реквизитов
+  var btn = document.getElementById('rx-req-copy'), list = document.getElementById('rx-req-list'), done = document.getElementById('rx-req-done');
+  if (btn && list && navigator.clipboard) {
+    btn.addEventListener('click', function () {
+      var rows = [], dts = list.querySelectorAll('dt');
+      for (var i = 0; i < dts.length; i++) rows.push(dts[i].textContent + ': ' + dts[i].nextElementSibling.textContent);
+      navigator.clipboard.writeText(rows.join('\n')).then(function () { done.textContent = 'Реквизиты скопированы'; });
+    });
+  } else if (btn) { btn.hidden = true; }
+})();
+</script>
+</div>
+<!-- ================= КОНЕЦ БЛОКА ================= -->
+
+<footer class="demo-foot">Подвал вашего сайта остаётся без изменений</footer>
+</body>
+</html>
